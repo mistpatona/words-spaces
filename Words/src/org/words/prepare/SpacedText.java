@@ -8,11 +8,11 @@ public class SpacedText {
 	}
 
 	public String noSpaces() {
-		String ans = new String("");
+		StringBuilder ans = new StringBuilder();
 		for (String i : text) {
-			ans = ans + i;
+			ans.append(i);
 		}
-		return ans;
+		return ans.toString();
 	}
 
 
