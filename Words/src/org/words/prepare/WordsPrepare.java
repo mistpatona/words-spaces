@@ -4,11 +4,6 @@ import java.util.ArrayList;
 
 public class WordsPrepare {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
 	public static String simplify(String inp) {
 		return inp.toLowerCase().replaceAll("[\n\t]", " ").replaceAll("[0-9-,.;:()\"']", "");
 	}

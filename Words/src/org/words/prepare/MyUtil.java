@@ -25,14 +25,15 @@ public class MyUtil {
 		if (src.length() < 2) {
 			return "";
 		}
-		String ans = new String(); // TODO: change to string builder !
+		// TODO: change to string builder ++++
+		StringBuilder ans = new StringBuilder();
 		for (int i = 0; i < src.length(); i++) {
 			if (spaces.contains(i)) {
-				ans += ' ';
+				ans.append(' '); // ans += ' ';
 			}
-			ans += src.charAt(i);
+			ans.append(src.charAt(i));
 
 		}
-		return ans;
+		return ans.toString();
 	}
 }

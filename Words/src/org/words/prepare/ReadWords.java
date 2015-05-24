@@ -6,16 +6,16 @@ import java.io.IOException;
 
 public class ReadWords {
 	
-	public static String readFileToString(String fn) throws IOException {
+	static String readFileToString(String fn) throws IOException {
 		FileReader fr = new FileReader(fn);
 		BufferedReader br = new BufferedReader(fr);
 		String ss = null;
-		String result = "";
+		StringBuilder ans = new StringBuilder();
 		while ((ss = br.readLine()) != null){
-			result += (" " + ss);	
+			ans.append(" " + ss);	
 		}
 		br.close();
-		return result;
+		return ans.toString();
 	}
 	
 	public static SpacedText fromFile(String fn) throws IOException {

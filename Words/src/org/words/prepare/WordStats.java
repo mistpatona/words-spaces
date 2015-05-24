@@ -9,7 +9,7 @@ public class WordStats implements Comparable<WordStats> {
 		nospaces = isSpace ? 0 : 1;
 	}
 
-	public void add(Boolean                isSpace) {
+	public void add(Boolean isSpace) {
 		if (isSpace) {
 			spaces++;
 		} else {
@@ -54,12 +54,11 @@ public class WordStats implements Comparable<WordStats> {
 
 	@Override
 	public int compareTo(WordStats w) {
-		// TODO Auto-generated method stub
 		double my = weightedStats().weight();
 		double he = w.weightedStats().weight();
 		if (Math.abs(my - he) < 1e-5) { return 0;
 		} else if (my > he ) {return -1;
-		} else {return 1;} // compares for the highest scores to be first
+		} else {return 1;} // compares for the highest scores to be first when sorting
 	
 	}
 }
