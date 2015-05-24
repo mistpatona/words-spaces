@@ -1,6 +1,7 @@
 package org.words.prepare;
 
 import java.io.IOException;
+import java.util.Arrays;
 
 /*
  * how to run the compiled classes from command line:
@@ -24,6 +25,12 @@ public class PrideTest {
 		SpacedText txt = ReadWords.fromFile("src/pride_and_prejustice.txt");
 		AnalyserPack p = new AnalyserPack(txt);
 		String s1 = "some cats do do jump and see other cats and dogs";
+		if (args.length > 0)  
+		{
+			StringBuilder builder = new StringBuilder();
+			for(String s : args) {  builder.append(s); }
+			s1 = builder.toString();
+		}
 		String s  = s1.toLowerCase().replaceAll(" ", "");       // "somelandandotherminorterritories";
 		System.out.println (s1);
 		System.out.println (s);
@@ -31,3 +38,14 @@ public class PrideTest {
 	}
 
 }
+
+/*
+ * an example from life:
+ * 
+
+Harlot:Words sergey$ java -cp bin  org.words.prepare.PrideTest   dead men tell no tales
+deadmentellnotales
+deadmentellnotales
+'dead mentell not ales'
+
+*/
