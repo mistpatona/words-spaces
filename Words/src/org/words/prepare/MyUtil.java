@@ -25,7 +25,7 @@ public class MyUtil {
 		if (src.length() < 2) {
 			return "";
 		}
-		String ans = new String(); // TODO: change to string builder
+		String ans = new String(); // TODO: change to string builder !
 		for (int i = 0; i < src.length(); i++) {
 			if (spaces.contains(i)) {
 				ans += ' ';

@@ -1,0 +1,5 @@
+SpacedText txt = ReadWords.fromFile("src/australia1.txt");
+AnalyserPack p = new AnalyserPack(txt);
+String s  = "somelandandandotherminorterritories";
+//p.restoreSpaces1("somelandandotherminorterritories");
+MyUtil.restoreSpacesByPositions(s,p.restoreSpaces1(s))

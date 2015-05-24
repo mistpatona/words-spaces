@@ -9,7 +9,7 @@ public class WordStats implements Comparable<WordStats> {
 		nospaces = isSpace ? 0 : 1;
 	}
 
-	public void add(Boolean isSpace) {
+	public void add(Boolean                isSpace) {
 		if (isSpace) {
 			spaces++;
 		} else {
