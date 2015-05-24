@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class MyUtil {
+	// place to hold some functions
 	public static Set<Integer> array2Set(int[] src) {
 		Set<Integer> r = new HashSet<Integer>();
 		r.clear(); // is this needed?
@@ -25,7 +26,6 @@ public class MyUtil {
 		if (src.length() < 2) {
 			return "";
 		}
-		// TODO: change to string builder ++++
 		StringBuilder ans = new StringBuilder();
 		for (int i = 0; i < src.length(); i++) {
 			if (spaces.contains(i)) {

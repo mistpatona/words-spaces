@@ -9,9 +9,7 @@ public class SpacedText {
 
 	public String noSpaces() {
 		StringBuilder ans = new StringBuilder();
-		for (String i : text) {
-			ans.append(i);
-		}
+		for (String i : text) {	ans.append(i); }
 		return ans.toString();
 	}
 

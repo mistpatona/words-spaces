@@ -17,7 +17,6 @@ public class AnalyserPack {
 		ArrayList<Integer> ans = new ArrayList<Integer>();
 		for (int i = 1; i < src.length(); i++) {
 			chip = MyUtil.myCutPQ(src, i, d, d);
-			//System.out.print(chip);
 			ArrayList<WordStats> wss = find(chip, d);
 			if (!wss.isEmpty()) {
 				ws = wss.iterator().next(); // we need the first element ( 'cus
@@ -25,11 +24,7 @@ public class AnalyserPack {
 				if (ws.spaceProbability() > 0.5) {
 										ans.add(i);
 				}
-				//System.out.print(ws.spaceProbability());
-				//System.out.println();
-			} else { 
-				//System.out.println("E");
-			}
+			} 
 		}
 		return ans;
 	}

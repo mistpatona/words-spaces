@@ -1,7 +1,6 @@
 package org.words.prepare;
 
 import java.io.IOException;
-import java.util.Arrays;
 
 /*
  * how to run the compiled classes from command line:

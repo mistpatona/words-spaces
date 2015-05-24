@@ -9,17 +9,11 @@ public class WeightedStats {
 		spaceP = (float) p;
 	}
 
-	/*
-	 * float spaceP() { return spaceP; }
-	 * 
-	 * float noSpaceP() { return 1 - spaceP; }
-	 */
-
-	double weight() { // the more, the better
+	public double weight() { // the more, the better
 		return pWeight() * statWeight();
 	}
 
-	double statWeight() {
+	double statWeight() {  // depends on how many observations the answer is based on
 		if (count < 3) {
 			return 0.05;
 		} else if (count < 6) {
@@ -30,16 +24,16 @@ public class WeightedStats {
 			return 3;// Math.log((double)count);
 	}
 
-	double pWeight() {
+	double pWeight() { // what is an estimation of error probability
 		double d = Math.abs(spaceP - 0.5);
 		if (d > 0.45) {
 			return 20; // good match, error < 0.05
 		} else if (d > 0.3) {
-			return 10;
+			return 10; // error below 20%
 		} else if (d > 0.17) {
-			return 5; // so-so, one sigma (66%)
+			return 5; // so-so, one sigma (66% correct)
 		} else {
-			return 0; // fifty-fifty, no disticnt answer
+			return 0; // fifty-fifty, no distinct answer
 		}
 	}
 
