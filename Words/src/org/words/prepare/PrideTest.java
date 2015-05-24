@@ -2,6 +2,22 @@ package org.words.prepare;
 
 import java.io.IOException;
 
+/*
+ * how to run the compiled classes from command line:
+ * java -cp bin  org.words.prepare.PrideTest
+ * 
+ * comlipling classes by javac one directory level lower (in src folder),
+ * so
+ * after compiling by hand in src dir:
+ *  
+ *  src$ javac -cp . org/words/prepare/PrideTest.java
+ *  
+ *  do:
+ *  
+ *  cd ..
+ *  java -cp src  org.words.prepare.PrideTest
+ */
+
 public class PrideTest {
 	
 	public static void main(String[] args) throws IOException {
